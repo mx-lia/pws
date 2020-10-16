@@ -4,7 +4,6 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using WebServices.Simplex;
 
 namespace TestWebFormApp
 {
@@ -14,7 +13,7 @@ namespace TestWebFormApp
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            client = new Simplex();
         }
 
         protected void sum_Click(object sender, EventArgs e)
