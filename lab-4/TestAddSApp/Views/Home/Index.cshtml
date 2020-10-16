@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div style="margin: 10px">
+    <input type="text" id="x" />
+    <span>+</span>
+    <input type="text" id="y" />
+    <button onclick="CalcSum()">=</button>
+    <label id="result"></label>
+</div>
+
+<script>
+    function CalcSum() {
+        $.ajax({
+            type: 'POST',
+            contentType: "application/json",
+            url: 'http://localhost:58979/Simplex.asmx/addS',
+            data: JSON.stringify({x:$("#x").val(),y:$("#y").val()}),        
+            success: function (data) {
+                $("#result").text(data.d);
+            },
+            error: function (x, y, z) {
+                alert(x + '\n' + y + '\n' + z);
+            }
+        });
+    }
+</script>

@@ -1,0 +1,10 @@
+D:\Study\ASP.Net\lab-4\TestSumApp\bin\Debug\TestSumApp.exe.config
+D:\Study\ASP.Net\lab-4\TestSumApp\bin\Debug\TestSumApp.exe
+D:\Study\ASP.Net\lab-4\TestSumApp\bin\Debug\TestSumApp.pdb
+D:\Study\ASP.Net\lab-4\TestSumApp\obj\Debug\TestSumApp.csprojAssemblyReference.cache
+D:\Study\ASP.Net\lab-4\TestSumApp\obj\Debug\TestSumApp.Form1.resources
+D:\Study\ASP.Net\lab-4\TestSumApp\obj\Debug\TestSumApp.Properties.Resources.resources
+D:\Study\ASP.Net\lab-4\TestSumApp\obj\Debug\TestSumApp.csproj.GenerateResource.cache
+D:\Study\ASP.Net\lab-4\TestSumApp\obj\Debug\TestSumApp.csproj.CoreCompileInputs.cache
+D:\Study\ASP.Net\lab-4\TestSumApp\obj\Debug\TestSumApp.exe
+D:\Study\ASP.Net\lab-4\TestSumApp\obj\Debug\TestSumApp.pdb

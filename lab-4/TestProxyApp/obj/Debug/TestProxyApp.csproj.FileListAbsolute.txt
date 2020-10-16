@@ -1,0 +1,10 @@
+D:\Study\ASP.Net\lab-4\TestProxyApp\bin\Debug\TestProxyApp.exe.config
+D:\Study\ASP.Net\lab-4\TestProxyApp\bin\Debug\TestProxyApp.exe
+D:\Study\ASP.Net\lab-4\TestProxyApp\bin\Debug\TestProxyApp.pdb
+D:\Study\ASP.Net\lab-4\TestProxyApp\obj\Debug\TestProxyApp.csprojAssemblyReference.cache
+D:\Study\ASP.Net\lab-4\TestProxyApp\obj\Debug\TestProxyApp.Form1.resources
+D:\Study\ASP.Net\lab-4\TestProxyApp\obj\Debug\TestProxyApp.Properties.Resources.resources
+D:\Study\ASP.Net\lab-4\TestProxyApp\obj\Debug\TestProxyApp.csproj.GenerateResource.cache
+D:\Study\ASP.Net\lab-4\TestProxyApp\obj\Debug\TestProxyApp.csproj.CoreCompileInputs.cache
+D:\Study\ASP.Net\lab-4\TestProxyApp\obj\Debug\TestProxyApp.exe
+D:\Study\ASP.Net\lab-4\TestProxyApp\obj\Debug\TestProxyApp.pdb
