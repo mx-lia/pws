@@ -1,0 +1,7 @@
+D:\Study\ASP.Net\lab-5\WCFService\bin\Debug\WCFService.dll.config
+D:\Study\ASP.Net\lab-5\WCFService\bin\Debug\WCFService.dll
+D:\Study\ASP.Net\lab-5\WCFService\bin\Debug\WCFService.pdb
+D:\Study\ASP.Net\lab-5\WCFService\obj\Debug\WCFService.csprojAssemblyReference.cache
+D:\Study\ASP.Net\lab-5\WCFService\obj\Debug\WCFService.csproj.CoreCompileInputs.cache
+D:\Study\ASP.Net\lab-5\WCFService\obj\Debug\WCFService.dll
+D:\Study\ASP.Net\lab-5\WCFService\obj\Debug\WCFService.pdb

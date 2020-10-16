@@ -1,0 +1,6 @@
+D:\Study\ASP.Net\lab-5\TestTcpEndpoint\bin\Debug\TestTcpEndpoint.exe.config
+D:\Study\ASP.Net\lab-5\TestTcpEndpoint\bin\Debug\TestTcpEndpoint.exe
+D:\Study\ASP.Net\lab-5\TestTcpEndpoint\bin\Debug\TestTcpEndpoint.pdb
+D:\Study\ASP.Net\lab-5\TestTcpEndpoint\obj\Debug\TestTcpEndpoint.csproj.CoreCompileInputs.cache
+D:\Study\ASP.Net\lab-5\TestTcpEndpoint\obj\Debug\TestTcpEndpoint.exe
+D:\Study\ASP.Net\lab-5\TestTcpEndpoint\obj\Debug\TestTcpEndpoint.pdb

@@ -1,0 +1,7 @@
+D:\Study\ASP.Net\lab-5\TestHttpEndpoint\bin\Debug\TestHttpEndpoint.exe.config
+D:\Study\ASP.Net\lab-5\TestHttpEndpoint\bin\Debug\TestHttpEndpoint.exe
+D:\Study\ASP.Net\lab-5\TestHttpEndpoint\bin\Debug\TestHttpEndpoint.pdb
+D:\Study\ASP.Net\lab-5\TestHttpEndpoint\obj\Debug\TestHttpEndpoint.csprojAssemblyReference.cache
+D:\Study\ASP.Net\lab-5\TestHttpEndpoint\obj\Debug\TestHttpEndpoint.csproj.CoreCompileInputs.cache
+D:\Study\ASP.Net\lab-5\TestHttpEndpoint\obj\Debug\TestHttpEndpoint.exe
+D:\Study\ASP.Net\lab-5\TestHttpEndpoint\obj\Debug\TestHttpEndpoint.pdb

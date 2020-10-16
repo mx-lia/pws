@@ -1,0 +1,11 @@
+D:\Study\ASP.Net\lab-5\ConsoleHost\bin\Debug\ConsoleHost.exe.config
+D:\Study\ASP.Net\lab-5\ConsoleHost\bin\Debug\ConsoleHost.exe
+D:\Study\ASP.Net\lab-5\ConsoleHost\bin\Debug\ConsoleHost.pdb
+D:\Study\ASP.Net\lab-5\ConsoleHost\bin\Debug\WCFService.dll
+D:\Study\ASP.Net\lab-5\ConsoleHost\bin\Debug\WCFService.pdb
+D:\Study\ASP.Net\lab-5\ConsoleHost\bin\Debug\WCFService.dll.config
+D:\Study\ASP.Net\lab-5\ConsoleHost\obj\Debug\ConsoleHost.csprojAssemblyReference.cache
+D:\Study\ASP.Net\lab-5\ConsoleHost\obj\Debug\ConsoleHost.csproj.CoreCompileInputs.cache
+D:\Study\ASP.Net\lab-5\ConsoleHost\obj\Debug\ConsoleHost.csproj.CopyComplete
+D:\Study\ASP.Net\lab-5\ConsoleHost\obj\Debug\ConsoleHost.exe
+D:\Study\ASP.Net\lab-5\ConsoleHost\obj\Debug\ConsoleHost.pdb
