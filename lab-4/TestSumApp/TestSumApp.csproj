@@ -80,6 +80,9 @@
     <None Include="Connected Services\ServiceReference\TestSumApp.ServiceReference.add1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\ServiceReference\TestSumApp.ServiceReference.addS1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\ServiceReference\TestSumApp.ServiceReference.concat1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>

@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Script.Services;
@@ -35,6 +36,13 @@ namespace ASMXService
         [WebMethod(Description = "lab-4: sum", MessageName = "sum")]
         public A Sum(A a1, A a2)
         {
+            Stream stream = this.Context.Request.InputStream;
+            stream.Position = 0;
+            StreamReader streamReader = new StreamReader(this.Context.Request.InputStream);
+            string s = streamReader.ReadToEnd();
+            Console.WriteLine(s);
+            streamReader.Close();
+
             return new A { s = a1.s + ' ' + a2.s, k = a1.k + a2.k, f = a1.f + a2.f };
         }
 

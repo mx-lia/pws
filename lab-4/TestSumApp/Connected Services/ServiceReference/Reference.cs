@@ -112,6 +112,13 @@ namespace TestSumApp.ServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://MYS/sum", ReplyAction="*")]
         System.Threading.Tasks.Task<TestSumApp.ServiceReference.sum1> SumAsync(TestSumApp.ServiceReference.sum request);
+        
+        // CODEGEN: Контракт генерации сообщений с именем упаковщика (addS) сообщения addS не соответствует значению по умолчанию (AddS).
+        [System.ServiceModel.OperationContractAttribute(Action="http://MYS/addS", ReplyAction="*")]
+        TestSumApp.ServiceReference.addS1 AddS(TestSumApp.ServiceReference.addS request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://MYS/addS", ReplyAction="*")]
+        System.Threading.Tasks.Task<TestSumApp.ServiceReference.addS1> AddSAsync(TestSumApp.ServiceReference.addS request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -228,6 +235,44 @@ namespace TestSumApp.ServiceReference {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="addS", WrapperNamespace="http://MYS/", IsWrapped=true)]
+    public partial class addS {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://MYS/", Order=0)]
+        public int x;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://MYS/", Order=1)]
+        public int y;
+        
+        public addS() {
+        }
+        
+        public addS(int x, int y) {
+            this.x = x;
+            this.y = y;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="addSResponse", WrapperNamespace="http://MYS/", IsWrapped=true)]
+    public partial class addS1 {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://MYS/", Order=0)]
+        public string addSResult;
+        
+        public addS1() {
+        }
+        
+        public addS1(string addSResult) {
+            this.addSResult = addSResult;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface SimplexSoapChannel : TestSumApp.ServiceReference.SimplexSoap, System.ServiceModel.IClientChannel {
     }
@@ -328,6 +373,31 @@ namespace TestSumApp.ServiceReference {
             inValue.a1 = a1;
             inValue.a2 = a2;
             return ((TestSumApp.ServiceReference.SimplexSoap)(this)).SumAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TestSumApp.ServiceReference.addS1 TestSumApp.ServiceReference.SimplexSoap.AddS(TestSumApp.ServiceReference.addS request) {
+            return base.Channel.AddS(request);
+        }
+        
+        public string AddS(int x, int y) {
+            TestSumApp.ServiceReference.addS inValue = new TestSumApp.ServiceReference.addS();
+            inValue.x = x;
+            inValue.y = y;
+            TestSumApp.ServiceReference.addS1 retVal = ((TestSumApp.ServiceReference.SimplexSoap)(this)).AddS(inValue);
+            return retVal.addSResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TestSumApp.ServiceReference.addS1> TestSumApp.ServiceReference.SimplexSoap.AddSAsync(TestSumApp.ServiceReference.addS request) {
+            return base.Channel.AddSAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TestSumApp.ServiceReference.addS1> AddSAsync(int x, int y) {
+            TestSumApp.ServiceReference.addS inValue = new TestSumApp.ServiceReference.addS();
+            inValue.x = x;
+            inValue.y = y;
+            return ((TestSumApp.ServiceReference.SimplexSoap)(this)).AddSAsync(inValue);
         }
     }
 }

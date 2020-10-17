@@ -55,6 +55,21 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="addS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="x" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="y" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="addSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="addSResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
     </s:schema>
   </wsdl:types>
   <wsdl:message name="addSoapIn">
@@ -75,6 +90,12 @@
   <wsdl:message name="sumSoapOut">
     <wsdl:part name="parameters" element="tns:sumResponse" />
   </wsdl:message>
+  <wsdl:message name="addSSoapIn">
+    <wsdl:part name="parameters" element="tns:addS" />
+  </wsdl:message>
+  <wsdl:message name="addSSoapOut">
+    <wsdl:part name="parameters" element="tns:addSResponse" />
+  </wsdl:message>
   <wsdl:portType name="SimplexSoap">
     <wsdl:operation name="Add">
       <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">lab-4: add</wsdl:documentation>
@@ -90,6 +111,11 @@
       <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">lab-4: sum</wsdl:documentation>
       <wsdl:input name="sum" message="tns:sumSoapIn" />
       <wsdl:output name="sum" message="tns:sumSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddS">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">lab-4: addS</wsdl:documentation>
+      <wsdl:input name="addS" message="tns:addSSoapIn" />
+      <wsdl:output name="addS" message="tns:addSSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="SimplexSoap" type="tns:SimplexSoap">
@@ -121,6 +147,15 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="AddS">
+      <soap:operation soapAction="http://MYS/addS" style="document" />
+      <wsdl:input name="addS">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="addS">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="SimplexSoap12" type="tns:SimplexSoap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
@@ -148,6 +183,15 @@
         <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output name="sum">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddS">
+      <soap12:operation soapAction="http://MYS/addS" style="document" />
+      <wsdl:input name="addS">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="addS">
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
