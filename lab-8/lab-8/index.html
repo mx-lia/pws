@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Lab-8</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        function SendReq(method) {
+            $.post('/api/jrservice/single', {
+                jsonrpc: "2.0",
+                id: "1",
+                method: method,
+                params: {
+                    key: $('#key').val(),
+                    value: $('#value').val()
+                }
+            }, function (response) {
+                $('#result').html(JSON.stringify(response));
+            });
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <label for="key">Key:</label>
+        <input id="key" type="text" />
+        <label for="value">Value:</label>
+        <input id="value" type="number"/>
+    </div>
+    <div style="display:flex">
+        <input type="button" value="GetM" onclick="SendReq(this.value)" />
+        <input type="button" value="SetM" onclick="SendReq(this.value)" />
+        <input type="button" value="AddM" onclick="SendReq(this.value)" />
+        <input type="button" value="SubM" onclick="SendReq(this.value)" />
+        <input type="button" value="MulM" onclick="SendReq(this.value)" />
+        <input type="button" value="DivM" onclick="SendReq(this.value)" />
+    </div>
+    <pre id="result"></pre>
+</body>
+</html>
