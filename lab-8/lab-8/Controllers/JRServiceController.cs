@@ -13,23 +13,35 @@ namespace lab_8.Controllers
 {
     public class JRServiceController : ApiController
     {
-        private bool errState;
+        [HttpPost]
+        public IHttpActionResult Single([FromBody] ReqJsonRPC reqJsonRPC)
+        {
+            if (HttpContext.Current.Session["errState"] != null && (bool)HttpContext.Current.Session["errState"] == true)
+            {
+                return Ok(new ErrorResJsonRPC() { Id = reqJsonRPC.Id, Jsonrpc = reqJsonRPC.Jsonrpc, Error = new Error() { Code = -32602, Message = "server error. service is unavailable" } });
+            }
+
+            return Ok(GenerateResponse(reqJsonRPC));
+        }
 
         [HttpPost]
-        public ResJsonRPC Single([FromBody] ReqJsonRPC reqJsonRPC) => GenerateResponse(reqJsonRPC);
-
-        [HttpPost]
-        public ResJsonRPC[] Patch([FromBody] ReqJsonRPC[] reqJsonRPC)
+        public IHttpActionResult Patch([FromBody] ReqJsonRPC[] reqJsonRPC)
         {
             List<ResJsonRPC> result = new List<ResJsonRPC>();
 
             for (int i = 0; i < reqJsonRPC.Length; i++)
             {
-                if (errState) break;
-                result.Add(GenerateResponse(reqJsonRPC[i]));
+                if (HttpContext.Current.Session["errState"] != null && (bool)HttpContext.Current.Session["errState"] == true)
+                {
+                    result.Add(new ErrorResJsonRPC() { Id = reqJsonRPC[i].Id, Jsonrpc = reqJsonRPC[i].Jsonrpc, Error = new Error() { Code = -32602, Message = "server error. service is unavailable" } });
+                }
+                else
+                {
+                    result.Add(GenerateResponse(reqJsonRPC[i]));
+                }
             }
 
-            return result.ToArray();
+            return Ok(result.ToArray());
         }
 
         private ResJsonRPC GenerateResponse(ReqJsonRPC reqJsonRPC)
@@ -133,7 +145,7 @@ namespace lab_8.Controllers
         private void ErrorExit()
         {
             HttpContext.Current.Session.Clear();
-            errState = true;
+            HttpContext.Current.Session["errState"] = true;
         }
     }
 }
