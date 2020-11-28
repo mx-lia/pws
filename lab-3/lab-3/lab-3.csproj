@@ -93,10 +93,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\ErrorsController.cs" />
     <Compile Include="Controllers\StudentsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Error.cs" />
     <Compile Include="Models\LinkDto.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Models\StudentContext.cs" />

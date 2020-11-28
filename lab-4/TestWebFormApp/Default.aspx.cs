@@ -4,16 +4,17 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using TestWebFormApp.ASMX_Server;
 
 namespace TestWebFormApp
 {
     public partial class _Default : Page
     {
-        private Simplex client;
+        private SimplexImpl client;
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            client = new Simplex();
+            client = new SimplexImpl();
         }
 
         protected void sum_Click(object sender, EventArgs e)

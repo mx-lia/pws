@@ -159,7 +159,7 @@ namespace lab_3.Controllers
             }
             catch (Exception ex)
             {
-                return Content(HttpStatusCode.InternalServerError, new { status = HttpStatusCode.InternalServerError, message = ex.Message, href = "http://localhost:49985/api/errors/500" });
+                return Content(HttpStatusCode.BadRequest, new { status = HttpStatusCode.BadRequest, href = "http://localhost:49985/api/errors/50000" });
             }
            
         }
@@ -171,7 +171,7 @@ namespace lab_3.Controllers
 
             if (student == null)
             {
-                return Content(HttpStatusCode.NotFound, new { status = HttpStatusCode.NotFound, message = $"Student with id = {id} not found", href = "http://localhost:49985/api/errors/404" });
+                return Content(HttpStatusCode.BadRequest, new { status = HttpStatusCode.BadRequest, href = "http://localhost:49985/api/errors/40004" });
             }
             else
             {
@@ -194,7 +194,7 @@ namespace lab_3.Controllers
         {
             if(!ModelState.IsValid)
             {
-                return Content(HttpStatusCode.BadRequest, new { status = HttpStatusCode.BadRequest, message = $"Student isn't valid", href = "http://localhost:49985/api/errors/400" });
+                return Content(HttpStatusCode.BadRequest, new { status = HttpStatusCode.BadRequest, href = "http://localhost:49985/api/errors/40000" });
             }
 
             Student newStudent = context.Students.Add(student);
@@ -217,7 +217,7 @@ namespace lab_3.Controllers
             Student student = context.Students.Find(id);
             if (student == null)
             {
-                return Content(HttpStatusCode.NotFound, new { status = HttpStatusCode.NotFound, message = $"Student with id = {student.StudentId} not found", href = "http://localhost:49985/api/errors/404" });
+                return Content(HttpStatusCode.BadRequest, new { status = HttpStatusCode.BadRequest, href = "http://localhost:49985/api/errors/40004" });
             }
             context.Students.Remove(student);
             context.SaveChanges();

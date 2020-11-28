@@ -172,6 +172,9 @@
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="ASMX_Server\Simplex.cs" />
+    <Compile Include="ASMX_Server\SimplexImpl.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
